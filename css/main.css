@@ -61,7 +61,7 @@ header .container .elements {
 
 .container {
   margin: auto;
-  max-width: 1100px;
+  max-width: 25rem;
 }
 
 .formInput {
@@ -75,6 +75,10 @@ input[type=submit] {
   font-weight: bold;
 }
 
+label {
+  font-size: calc(0.6rem + 0.3vw);
+}
+
 #sectionWelcome, #sectionLeave {
   display: flex;
   background-size: cover;
@@ -83,9 +87,11 @@ input[type=submit] {
   align-items: center;
   color: black;
   height: 40vh;
+  font-size: calc(2rem + 0.5vw);
 }
 #sectionWelcome .wrapper, #sectionLeave .wrapper {
   background-color: rgba(209, 209, 209, 0.65);
+  padding: 1rem;
 }
 #sectionWelcome .wrapper hr, #sectionLeave .wrapper hr {
   width: 100px;
@@ -93,7 +99,6 @@ input[type=submit] {
 }
 #sectionWelcome .wrapper h1, #sectionLeave .wrapper h1 {
   font-size: calc(2rem + 0.5vw);
-  padding: 1rem;
 }
 
 #sectionWelcome {
@@ -108,6 +113,49 @@ input[type=submit] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#sectionForm, #sectionSearch {
+  background-color: rgb(35, 35, 35);
+}
+#sectionForm .wrapper, #sectionSearch .wrapper {
+  margin: 1rem 0;
+}
+#sectionForm .wrappers, #sectionSearch .wrappers {
+  margin: 1rem;
+}
+
+#sectionFacture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(247, 176, 115);
+  height: 150px;
+}
+#sectionFacture p {
+  margin: 0;
+}
+
+@media screen and (min-width: 997px) {
+  .container {
+    max-width: 1300px;
+  }
+  #sectionForm, #sectionSearch {
+    background-color: white;
+  }
+  #sectionForm .container, #sectionSearch .container {
+    background-color: rgb(35, 35, 35);
+  }
+  #sectionForm .wrappers, #sectionSearch .wrappers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #sectionForm .wrappers .wrapper, #sectionSearch .wrappers .wrapper {
+    padding: 0 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

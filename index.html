@@ -29,72 +29,92 @@
     </header>
     <main>
 
-            <div class="block" id="sectionWelcome">
-                <div class="container">
+        <div class="block" id="sectionWelcome">
+            <div class="container">
+                <div class="wrapper">
+                    <h1>Accueil nouveau client</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" id="sectionForm">
+            <div class="container">
+                <div class="wrappers">
                     <div class="wrapper">
-                        <h1>Accueil nouveau client</h1>
-                        <hr>
+
+                        <label for="firstName">Prenom</label>
+                        <input type="text" placeholder="Jean" class="formInput" name="formulaireinput"
+                            id="firstnNameInput">
+                    </div>
+                    <div class="wrapper">
+
+                        <label for="lastName">Nom</label>
+                        <input type="text" placeholder="Dupont" class="formInput" id="lastNameInput">
+                    </div>
+                    <div class="wrapper">
+                        <label for="nightNumber">Nombres de nuits</label>
+                        <input type="number" placeholder="2" class="formInput" id="nightNumberInput">
+                    </div>
+                    <div class="wrapper">
+                        <label for="room">Chambre</label>
+                        <select name="roomNumberName" id="roomNumber" class="formInput">
+                            <option value="chamberOne">Chambre 1 personne</option>
+                            <option value="chamberTwo">Chambre 2 personne</option>
+                            <option value="chamberFour">Chambre 4 personne</option>
+                            <option value="chamberLoft" selected>Loft</option>
+                        </select>
+                    </div>
+                    <div class="wrapper">
+                        <label for="lunch">Petit déjeuner</label><br>
+                        <input type="radio" name="lunchChoice" value="Oui" id="yesRadio">
+                        <label for="yesRadio">Oui</label>
+                        <input type="radio" name="lunchChoice" value="Non" id="noRadio" checked>
+                        <label for="noRadio">Non</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="submit" class="formInput" value="Enregistrer le client" id="submitButton">
                     </div>
                 </div>
             </div>
-    
-            <div class="block" id="sectionForm">
-                <div class="container">
-                    <div class="wrappers">
-                        <div class="wrapper">
-                            <p>Prénom</p>
-                            <label for=""></label>
-                            <input type="text" placeholder="Jean" class="formInput">
-                        </div>
-                        <div class="wrapper">
-                            <p>Nom</p>
-                            <label for=""></label>
-                            <input type="text" placeholder="Dupont" class="formInput">
-                        </div>
-                        <div class="wrapper">
-                            <p>Nombres de nuits</p>
-                            <label for=""></label>
-                            <input type="number" placeholder="2" class="formInput">
-                        </div>
-                        <div class="wrapper">
-                            <p>Chambre</p>
-                            <label for=""></label>
-                            <select name="" id="" class="formInput">
-                                <option value="chamberOne">Chambre 1 personne</option>
-                                <option value="chamberTwo">Chambre 2 personne</option>
-                                <option value="chamberFour">Chambre 4 personne</option>
-                                <option value="chamberLoft" selected>Loft</option>
-                            </select>
-                        </div>
-                        <div class="wrapper">
-                            <p>Petit déjeuner</p>
-                           
-                            <input type="radio" name="lunchChoice" value="Oui" id="yesRadio">
-                            <label for="yesRadio">Oui</label>
-                            <input type="radio" name="lunchChoice" value="Non" id="noRadio" checked>
-                            <label for="noRadio">Non</label>
-                        </div>
-                        <div class="wrapper">
-                            <input type="submit" class="formInput" value="Enregistrer le client">
-                        </div>
-                    </div>
-                    </div>
+        </div>
 
-                    <div id="sectionLeave" class="block">
-                        <div class="container">
-                            <div class="wrapper">
-                                <h1>Départ Client</h1>
-                                <hr>
-                            </div>
-                        </div>
+        <div id="sectionLeave" class="block">
+            <div class="container">
+                <div class="wrapper">
+                    <h1>Départ Client</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" id="sectionSearch">
+            <div class="container">
+                <div class="wrappers">
+                    <div class="wrapper">
+                        <label for="firstnameSearch">Prénom</label>
+                        <input type="text" placeholder="Jean" class="formInput" id="firstnameInput">
                     </div>
-                    <div class="block" id="sectionFacture">
-                        <div class="container">
-                            <div class="wrapper">
-                                <p>Facture</p>
-                            </div>
-                        </div>
+                    <div class="wrapper">
+
+                        <label for="nameSearch">Nom</label>
+                        <input type="text" placeholder="Dujardin" class="formInput" id="lastnameInput">
                     </div>
+                    <div class="wrapper">
+                        <input type="submit" class="formInput" value="Rechercher" id="submitButtonSearch">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="block" id="sectionFacture">
+            <div class="container">
+                <div class="wrapper">
+                    <p>Facture</p>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="js/main.js"></script>
 </body>
