@@ -1,0 +1,146 @@
+@use "reset";
+@use "variables" as v;
+@use "mixin" as m;
+
+// Header
+
+header {
+    background: v.$backgroundHeaderColor;
+    .container{
+        margin: auto;
+    }
+        nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+                img {
+                    width: 150px;
+                }
+                ul {
+                    display: flex;
+                    li {
+                    margin: 0 0.2rem;
+                    list-style-type: none;
+                    font-size: v.$fontSizedefault;
+                    a {
+                    text-decoration: none;
+                    }
+                    }
+                }
+            }
+}
+
+// Main - contenu
+
+
+// Taille des inputs 
+.formInput {
+    width: 100%;
+    height: 40px;
+}
+
+// Couleur des bouton valider
+input[type="submit"]{
+    background: v.$buttonColor;
+    color: white;
+    font-weight: bold;
+}
+
+// Section avec image en background
+
+#sectionWelcome,
+#sectionLeave {
+    display: flex;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 40vh;
+    .wrappers {
+        background-color: v.$colorGreyfaded;
+        hr {
+            width: 100px;
+            border: solid 2px orange;
+        }
+        h1 {
+            padding: 1rem;
+            margin: 0;
+        }
+        .wrapperImg {
+            position: absolute;
+            z-index: 1;
+            img {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+#sectionWelcome{
+    background-image: url(../img/Lille-Seminaires.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sectionLeave {
+    background-image: url(../img/Lille-Hall.jpg);
+    background-size: cover;
+    background-position: unset;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#sectionForm,
+#sectionSearch {
+    font-size: v.$fontSizedefault;
+    margin: 2rem 0;
+    .container{
+        width: 100%;
+    }
+    .wrappers{
+        background-color: v.$backgroundHeaderColor;
+        width: 100%;
+    }
+
+}
+
+#sectionFacture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: v.$buttonColor;
+    height: 150px;
+    opacity: 0;
+    p{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width : 997px){
+    .container{
+       max-width: 1260px;
+    }
+
+    #sectionForm, #sectionSearch{ 
+        display: flex;
+        justify-content: center;
+        p{
+            margin: 0;
+        }
+        .wrappers{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .wrapper{
+            margin: 0 2rem;   }
+
+    }
+}
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Plaza</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/63d06bf0f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+    <header>
+        <div class="container">
+            <div class="elements">
+                <nav>
+                    <img src="img/Logoblanc.png" alt="">
+                    <ul>
+                        <li><a href="">Nouveau Client</li></a>
+                        <li><a href="">Départ client</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+
+            <div class="block" id="sectionWelcome">
+                <div class="container">
+                    <div class="wrapper">
+                        <h1>Accueil nouveau client</h1>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="block" id="sectionForm">
+                <div class="container">
+                    <div class="wrappers">
+                        <div class="wrapper">
+                            <p>Prénom</p>
+                            <label for=""></label>
+                            <input type="text" placeholder="Jean" class="formInput">
+                        </div>
+                        <div class="wrapper">
+                            <p>Nom</p>
+                            <label for=""></label>
+                            <input type="text" placeholder="Dupont" class="formInput">
+                        </div>
+                        <div class="wrapper">
+                            <p>Nombres de nuits</p>
+                            <label for=""></label>
+                            <input type="number" placeholder="2" class="formInput">
+                        </div>
+                        <div class="wrapper">
+                            <p>Chambre</p>
+                            <label for=""></label>
+                            <select name="" id="" class="formInput">
+                                <option value="chamberOne">Chambre 1 personne</option>
+                                <option value="chamberTwo">Chambre 2 personne</option>
+                                <option value="chamberFour">Chambre 4 personne</option>
+                                <option value="chamberLoft" selected>Loft</option>
+                            </select>
+                        </div>
+                        <div class="wrapper">
+                            <p>Petit déjeuner</p>
+                           
+                            <input type="radio" name="lunchChoice" value="Oui" id="yesRadio">
+                            <label for="yesRadio">Oui</label>
+                            <input type="radio" name="lunchChoice" value="Non" id="noRadio" checked>
+                            <label for="noRadio">Non</label>
+                        </div>
+                        <div class="wrapper">
+                            <input type="submit" class="formInput" value="Enregistrer le client">
+                        </div>
+                    </div>
+                    </div>
+
+                    <div id="sectionLeave" class="block">
+                        <div class="container">
+                            <div class="wrapper">
+                                <h1>Départ Client</h1>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block" id="sectionFacture">
+                        <div class="container">
+                            <div class="wrapper">
+                                <p>Facture</p>
+                            </div>
+                        </div>
+                    </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
