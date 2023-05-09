@@ -81,7 +81,6 @@ label {
 
 #sectionWelcome, #sectionLeave {
   display: flex;
-  background-size: cover;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -113,7 +112,6 @@ label {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 #sectionForm, #sectionSearch {
@@ -139,7 +137,7 @@ label {
 
 @media screen and (min-width: 997px) {
   .container {
-    max-width: 1300px;
+    max-width: 1400px;
   }
   #sectionForm, #sectionSearch {
     background-color: white;
