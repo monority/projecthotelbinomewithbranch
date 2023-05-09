@@ -26,29 +26,23 @@
         </div>
     </header>
 
+
     <main>
         <!-- 1ère section "Accueil nouveau client"-->
         <div class="block" id="sectionWelcome">
-            <div class="container">
-                <div class="wrapper">
-                    <h1>Accueil nouveau client</h1>
-                    <hr>
+            <div class="containers">
+                <div class="wrapperImg">
+                    <div class="title">
+                        <h1>Accueil nouveau client</h1>
+                        <hr>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- 2ème section "Formulaire"-->
-        <div class="block" id="sectionForm">
-            <div class="container">
-                <div class="wrappers">
+                <div class="container">
                     <div class="wrapper">
-
                         <label for="firstName">Prenom</label>
-                        <input type="text" placeholder="Jean" class="formInput" name="formulaireinput"
-                            id="prenom">
+                        <input type="text" placeholder="Jean" class="formInput" name="formulaireinput" id="prenom">
                     </div>
                     <div class="wrapper">
-
                         <label for="lastName">Nom</label>
                         <input type="text" placeholder="Dupont" class="formInput" id="nom">
                     </div>
@@ -73,54 +67,44 @@
                         <label for="noRadio">Non</label>
                     </div>
                     <div class="wrapper">
-                        <button class="formInput submitButton" type="button" id="formButton" onclick="getValue()">Enregistrer le client <i class="fa-solid fa-calendar"></i></button>
+                        <button class="formInput submitButton" type="button" id="formButton"
+                            onclick="getValue()">Enregistrer le client <i class="fa-solid fa-calendar"></i></button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 3ème section "Départ Client" -->
-        <div class="block" id="sectionLeave">
-            <div class="container">
-                <div class="wrapper">
-                    <h1>Départ Client</h1>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4ème section "Rechercher un client" -->
+        <!-- 2ème section "Rechercher un client" -->
         <div class="block" id="sectionSearch">
-            <div class="container">
-                <div class="wrappers">
+            <div class="containers">
+                <div class="wrapperImg">
+                    <div class="title">
+                        <h1>Départ client</h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="container">
                     <div class="wrapper">
                         <label for="firstnameSearch">Prénom</label>
                         <input type="text" placeholder="Jean" class="formInput" id="prenomSearch">
                     </div>
                     <div class="wrapper">
-
                         <label for="nameSearch">Nom</label>
                         <input type="text" placeholder="Dujardin" class="formInput" id="nomSearch">
                     </div>
                     <div class="wrapper">
-                        <button type="button" class="formInput submitButton" onclick="search()";>Rechercher le client <i class="fa-solid fa-user"></i></button> 
+                        <button type="button" class="formInput submitButton" onclick="search()" ;>Rechercher le client
+                            <i class="fa-solid fa-user"></i></button>
+                    </div>
+                    <div class="wrapper">
+                        <div id="billHide"></div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Section facture - s'affiche quand on clique sur rechercher  -->
-        <div class="block display-none" id="sectionFacture">
-            <div class="container">
-                <div class="wrapper">
-                    <div id="billHide"></div>
-                </div>
             </div>
         </div>
     </main>
-    <script src="js/main2.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
-
-<!-- sass --watch sass/main.scss css/main.css -->

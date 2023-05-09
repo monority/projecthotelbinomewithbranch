@@ -1,158 +1,93 @@
-@use "reset";
 @use "variables" as v;
-@use "mixin" as m;
+@use "reset" as r;
+@use "mixins" as m;
 
-// Header // 
+
+// header //
+
 header {
-    background: v.$backgroundHeaderColor;
-    .container{
-        margin: auto;
-    }
-        nav {
-            width: 100%;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
+    background-color: v.$backgroundHeaderColor;
+    nav{
+            display: flex;        
             justify-content: space-between;
-                img {
-                    width: 150px;
-                }
-                ul {
-                    display: flex;
-                    li {
-                    margin: 0 0.2rem;
-                    list-style-type: none;
-                    font-size: v.$fontSizedefault;
-                    a {
+            align-items: center;
+
+            img{
+                max-width: 35%;
+            }
+            li{
+                display: inline-block;
+                a{
                     text-decoration: none;
-                    }
-                    }
+                    color: v.$mainColor;
                 }
             }
-}
-
-header{
-    background: v.$backgroundHeaderColor;
-    .container{
-        margin: auto;
-        .elements {
-            justify-content: space-between;
         }
-    }
 }
 
-// Container sur tout les éléments //
+
+
+
+// Variable global //
+
+
 .container{
     margin: auto;
-    max-width: 25rem;
+    max-width: 30rem;
+    color: white;
 }
 
-// Taille des inputs 
 .formInput {
     width: 100%;
     height: 40px;
 }
-
 .submitButton{
     background: v.$buttonColor;
     color: white;
     font-weight: bold;
 }
-label{
-    font-size: v.$fontSizeSmall;
-}
 
-// Les deux sections avec une image 
-
-#sectionWelcome, #sectionLeave{
+#sectionWelcome .containers, #sectionSearch .containers{
+    background-color: v.$backgroundMainColor;
+    .wrapperImg{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-    color: black;
+    justify-content: center;
+    width: 100%;
     height: 40vh;
-    font-size: v.$fontSizeTitle;
-
-    .wrapper {
+    .title{
         background-color: v.$colorGreyfaded;
-        padding:1rem;       
-        hr {
+        hr{
             width: 100px;
             border: solid 2px orange;
         }
-        h1 {
-            font-size: v.$fontSizeTitle;
-        }
-        }
     }
+}}
 
-
-#sectionWelcome{
+#sectionWelcome .wrapperImg{
     background-image: url(../img/Lille-Seminaires.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-#sectionLeave {
+#sectionSearch .wrapperImg{
     background-image: url(../img/Lille-Hall.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-// Les sections avec des inputs 
-#sectionForm, #sectionSearch{
 
-    background-color: v.$backgroundMainColor;
-    .wrapper{
-        margin: 1rem 0;
-    }
-    .wrappers{
-        margin: 1rem;
-    }
-}
-
-// La derniere section qui s'affiche lorsqu'on clique sur rechercher
-#sectionFacture{
-    justify-content: center;
-    align-items: center;
-    background: v.$buttonColor;
-    height: 150px;
-    p{
-        margin: 0;
-    }
-}
-
-.display-none{
-    display: none;
-}
-
-.display-flex{
-    display: flex;
-}
-
-// Responsive
-@media screen and (min-width : 997px){
-    .container{
-       max-width: 1400px;
+@media screen and (min-width : 997px) {
+    .container {
+        max-width: 120rem;
 
     }
-    #sectionForm, #sectionSearch{
-        background-color: white;
-        .container{
-            background-color: v.$backgroundMainColor;
-        }
-    }
-    #sectionForm .wrappers, #sectionSearch .wrappers{
+    #sectionWelcome .container, #sectionSearch .container{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         .wrapper{
-            padding: 0 0.5rem;
+            padding: 2rem;
         }
     }
 }
-   
