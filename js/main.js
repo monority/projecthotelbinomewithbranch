@@ -65,10 +65,8 @@ function search() {
 
     placediv.append(newP);
 
-
     for (let searchindex = 0; searchindex < enregistrement.length; searchindex++) {
         if (enregistrement[searchindex].prenom === prenom2 && enregistrement[searchindex].nom === nom2 && enregistrement[searchindex].prenom !== "") {
-            console.log("c bon");
             trouve = true;
 
             // calcul du prix
