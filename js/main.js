@@ -1,11 +1,9 @@
-console.log("test");
-
 let i = 0;
 
 // création du texte à afficher
 let newP = document.createElement('p');
-let placediv = document.getElementById("affichage");
-let sectionLeave = document.getElementById("sectionFacture");
+let placediv = document.getElementById("billHide");
+let sectionHide = document.getElementById("sectionFacture");
 // ---
 
 
@@ -50,6 +48,14 @@ function getValue() {
     alert("tu es enregistré");
 }
 
+function addSection() {
+    sectionHide.classList.remove("display-none");
+    sectionHide.classList.add("display-flex");
+}
+function removeSection(){
+    sectionHide.classList.add("display-none");
+    sectionHide.classList.remove("display-flex");
+}
 
 
 function search() {
@@ -74,11 +80,14 @@ function search() {
                 enregistrement[searchindex].prix = 139;
             } else enregistrement[searchindex].prix = 189;
             // ---
-
+           addSection()
+           setTimeout(removeSection, 5000);
             newP.textContent = (`La facture de ${enregistrement[searchindex].prenom} ${enregistrement[searchindex].nom} est de ${enregistrement[searchindex].prix}€`);
         }
         
         else {
+            addSection()
+            setTimeout(removeSection, 5000);
             trouve = false;
             newP.textContent = (`Client introuvable`);
         }

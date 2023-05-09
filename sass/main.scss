@@ -1,6 +1,6 @@
 @use "variables" as v;
 @use "reset" as r;
-@use "mixins" as m;
+@use "mixin" as m;
 
 
 // header //
@@ -13,10 +13,11 @@ header {
             align-items: center;
 
             img{
-                max-width: 35%;
+                max-width: 150px;
             }
             li{
                 display: inline-block;
+                font-size: v.$fontSizedefault;
                 a{
                     text-decoration: none;
                     color: v.$mainColor;
@@ -25,12 +26,7 @@ header {
         }
 }
 
-
-
-
 // Variable global //
-
-
 .container{
     margin: auto;
     max-width: 30rem;
@@ -75,11 +71,28 @@ header {
     background-image: url(../img/Lille-Hall.jpg);
 }
 
+#sectionFacture {
+    justify-content: center;
+    align-items: center;
+    background: #c2a182;
+    height: 150px;
+  }
+  #sectionFacture p {
+    margin: 0;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+  .display-flex {
+    display: flex;
+  }
+
 
 @media screen and (min-width : 997px) {
     .container {
-        max-width: 120rem;
-
+        max-width: 110rem;
     }
     #sectionWelcome .container, #sectionSearch .container{
         display: flex;
