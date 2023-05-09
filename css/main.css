@@ -11,7 +11,7 @@ body {
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
-  background-color: rgb(35, 35, 35);
+  background-color: #1b1b1b;
   color: rgb(240, 240, 240);
   background-color: white;
 }
@@ -69,8 +69,8 @@ header .container .elements {
   height: 40px;
 }
 
-input[type=submit] {
-  background: rgb(247, 176, 115);
+.submitButton {
+  background: #c2a182;
   color: white;
   font-weight: bold;
 }
@@ -115,7 +115,7 @@ label {
 }
 
 #sectionForm, #sectionSearch {
-  background-color: rgb(35, 35, 35);
+  background-color: #1b1b1b;
 }
 #sectionForm .wrapper, #sectionSearch .wrapper {
   margin: 1rem 0;
@@ -128,7 +128,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(247, 176, 115);
+  background: #c2a182;
   height: 150px;
 }
 #sectionFacture p {
@@ -143,7 +143,7 @@ label {
     background-color: white;
   }
   #sectionForm .container, #sectionSearch .container {
-    background-color: rgb(35, 35, 35);
+    background-color: #1b1b1b;
   }
   #sectionForm .wrappers, #sectionSearch .wrappers {
     display: flex;

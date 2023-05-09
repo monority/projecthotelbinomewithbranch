@@ -54,7 +54,7 @@ header{
     height: 40px;
 }
 
-input[type="submit"]{
+.submitButton{
     background: v.$buttonColor;
     color: white;
     font-weight: bold;
@@ -94,6 +94,7 @@ label{
     background-position: center;
     background-repeat: no-repeat;
 }
+
 #sectionLeave {
     background-image: url(../img/Lille-Hall.jpg);
     background-size: cover;
