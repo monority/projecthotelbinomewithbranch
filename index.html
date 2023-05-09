@@ -18,8 +18,8 @@
                 <nav>
                     <img src="img/Logoblanc.png" alt="">
                     <ul>
-                        <li><a href="">Nouveau Client</li></a>
-                        <li><a href="">Départ client</li></a>
+                        <li><a href="#sectionForm">Nouveau Client</li></a>
+                        <li><a href="#sectionLeave">Départ client</li></a>
                     </ul>
                 </nav>
             </div>
@@ -45,35 +45,35 @@
 
                         <label for="firstName">Prenom</label>
                         <input type="text" placeholder="Jean" class="formInput" name="formulaireinput"
-                            id="firstnNameInput">
+                            id="prenom">
                     </div>
                     <div class="wrapper">
 
                         <label for="lastName">Nom</label>
-                        <input type="text" placeholder="Dupont" class="formInput" id="lastNameInput">
+                        <input type="text" placeholder="Dupont" class="formInput" id="nom">
                     </div>
                     <div class="wrapper">
                         <label for="nightNumber">Nombres de nuits</label>
-                        <input type="number" placeholder="2" class="formInput" id="nightNumberInput" min="1" max="4">
+                        <input type="number" placeholder="2" class="formInput" id="nuits" min="1" max="4">
                     </div>
                     <div class="wrapper">
                         <label for="room">Chambre</label>
-                        <select name="roomNumberName" id="roomNumber" class="formInput">
-                            <option value="chamberOne">Chambre 1 personne</option>
-                            <option value="chamberTwo">Chambre 2 personne</option>
-                            <option value="chamberFour">Chambre 4 personne</option>
-                            <option value="chamberLoft" selected>Loft</option>
+                        <select name="typechambre" id="typechambre" class="formInput">
+                            <option value="ch1">Chambre 1 personne</option>
+                            <option value="ch2">Chambre 2 personne</option>
+                            <option value="ch3">Chambre 4 personne</option>
+                            <option value="loft" selected>Loft</option>
                         </select>
                     </div>
                     <div class="wrapper">
                         <label for="lunch">Petit déjeuner</label><br>
-                        <input type="radio" name="lunchChoice" value="Oui" id="yesRadio">
+                        <input type="radio" name="petit_dej" value="Oui" id="yesRadio">
                         <label for="yesRadio">Oui</label>
-                        <input type="radio" name="lunchChoice" value="Non" id="noRadio" checked>
+                        <input type="radio" name="petit_dej" value="Non" id="noRadio" checked>
                         <label for="noRadio">Non</label>
                     </div>
                     <div class="wrapper">
-                        <button class="formInput submitButton" id="submitButton">Enregistrer le client <i class="fa-solid fa-calendar"></i></button>
+                        <button class="formInput submitButton" type="button" id="formButton" onclick="getValue()">Enregistrer le client <i class="fa-solid fa-calendar"></i></button>
                     </div>
                 </div>
             </div>
@@ -95,16 +95,15 @@
                 <div class="wrappers">
                     <div class="wrapper">
                         <label for="firstnameSearch">Prénom</label>
-                        <input type="text" placeholder="Jean" class="formInput" id="firstnameInput">
+                        <input type="text" placeholder="Jean" class="formInput" id="prenomSearch">
                     </div>
                     <div class="wrapper">
 
                         <label for="nameSearch">Nom</label>
-                        <input type="text" placeholder="Dujardin" class="formInput" id="lastnameInput">
+                        <input type="text" placeholder="Dujardin" class="formInput" id="nomSearch">
                     </div>
                     <div class="wrapper">
-                        <button class="formInput submitButton" id="submitButton">Rechercher <i class="fa-solid fa-user"></i></button>
-
+                        <button type="button" class="formInput submitButton" onclick="search()";>Rechercher le client <i class="fa-solid fa-user"></i></button> 
                     </div>
                 </div>
             </div>
@@ -114,7 +113,7 @@
         <div class="block" id="sectionFacture">
             <div class="container">
                 <div class="wrapper">
-                    <p>Facture</p>
+                    <div id="affichage"></div>
                 </div>
             </div>
         </div>

@@ -135,6 +135,10 @@ label {
   margin: 0;
 }
 
+.flex {
+  display: flex;
+}
+
 @media screen and (min-width: 997px) {
   .container {
     max-width: 1400px;
