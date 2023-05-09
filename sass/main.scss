@@ -116,7 +116,6 @@ label{
 
 // La derniere section qui s'affiche lorsqu'on clique sur rechercher
 #sectionFacture{
-    display: flex;
     justify-content: center;
     align-items: center;
     background: v.$buttonColor;
@@ -125,7 +124,12 @@ label{
         margin: 0;
     }
 }
-.flex{
+
+.display-none{
+    display: none;
+}
+
+.display-flex{
     display: flex;
 }
 

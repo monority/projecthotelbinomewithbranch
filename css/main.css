@@ -125,7 +125,6 @@ label {
 }
 
 #sectionFacture {
-  display: flex;
   justify-content: center;
   align-items: center;
   background: #c2a182;
@@ -135,7 +134,11 @@ label {
   margin: 0;
 }
 
-.flex {
+.display-none {
+  display: none;
+}
+
+.display-flex {
   display: flex;
 }
 
